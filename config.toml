@@ -8,6 +8,7 @@ default_language = "en"   # 不支持国际化/翻译，但您可以为您的网
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
+
 #  -------------RSS 订阅 部分设置------------ 
 # The theme supports feeds (RSS and ATOM) 支持订阅
 generate_feeds = true
