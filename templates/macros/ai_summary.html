@@ -1,0 +1,29 @@
+{% macro ai_summary(src, update, model) %}
+{% if src and update and model %}
+{% set data = load_data(path="summary/" ~ src) %}
+<div class="summary-container">
+    <div class="summary-box">
+        <div class="summary-header" onclick="toggleSummary()">
+            <span>✨</span>
+            <div>AI总结摘要</div>
+            <svg class="summary-chevron" width="24" height="24"
+                viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="summary-content" id="uniq-summary-content">
+            <div class="summary-text">
+                <div id="summary-inner-content">{{ data | markdown() | safe }}</div>
+                <div class="summary-info">
+                    <div>AI Model: {{ model | safe }}</div>
+                    <div>Update At: {{ update | safe }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endmacro %}

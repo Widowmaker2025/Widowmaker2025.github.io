@@ -1,0 +1,15 @@
+{% if id %}
+{% if not style %} {% set style = "padding: 10px;" %} {% endif %}
+{% if not height %} {% set height = "1200px" %} {% endif %}
+{% if not lock %} {% set lock = "false" %} {% endif %}
+<div style="{{ style }}">
+{% if auto %}
+    <meting-js-hooked auto="{{ auto }}" list-max-height="{{ height }}" lock="{{ lock }}"></meting-js-hooked>
+{% else %}
+    {% if not server %} {% set server = "netease" %} {% endif %}
+    {% if not type %} {% set type = "song" %} {% endif %}
+    {% if not autoplay %} {% set autoplay = "false" %} {% endif %}
+    <meting-js-hooked server="{{ server }}" type="{{ type }}" id="{{ id }}" autoplay="{{ autoplay }}" list-max-height="{{ height }}" lock="{{ lock }}"></meting-js-hooked>
+{% endif %}
+</div>
+{% endif %}

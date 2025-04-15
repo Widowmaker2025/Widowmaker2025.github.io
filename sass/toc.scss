@@ -1,0 +1,33 @@
+.toc-container {
+    width: 280px;
+    z-index: 1;
+    right: calc((100% - 1360px) / 2);
+    position: fixed;
+    top: 20%;
+    bottom: 20%;
+    height: calc(100% - 40%);
+    overflow-y: auto;
+    scroll-behavior:smooth;
+}
+.toc-container .is-active-link {
+    color: var(--accent);
+    font-weight: 1000;
+    scroll-margin: 25px;
+}
+.toc-container ol li::before  {
+    content: "# " !important;
+    color: var(--accent);
+}
+.toc-container ol li a {
+    text-decoration: none;
+}
+.toc-container ol li a:hover {
+    color: var(--accent);
+}
+.toc{overflow-y:auto}
+.toc>.toc-list{overflow:hidden;position:relative}
+.toc>.toc-list li{list-style:none}
+.js-toc{overflow-y:hidden}
+.toc-list{margin:0;padding-left:10px}
+.is-collapsible{max-height:1000px;overflow:hidden;transition:all 300ms ease-in-out}
+.is-collapsed{max-height:0}

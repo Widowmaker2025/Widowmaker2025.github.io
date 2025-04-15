@@ -1,0 +1,43 @@
+input {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: none;
+    background-color: transparent;
+    font-size: inherit;
+}
+input:focus {
+    outline: none;
+}
+.secret-content-div {
+    display: flex;
+    align-items: center;
+}
+.secret-content-div input {
+    height: 40px;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 16px;
+    color: var(--accent);
+    vertical-align: bottom;
+}
+.secret-content-div div {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-left: none;
+    padding: 8px 15px;
+    border-radius: 0 4px 4px 0;
+    background: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    margin: 0;
+}

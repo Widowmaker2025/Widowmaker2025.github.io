@@ -1,0 +1,14 @@
+{% macro cdn() %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>console.log=()=>{}</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/topbar@3.0.0/topbar.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.31.0/tocbot.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='{{ get_url(path="js/main.js") }}'></script>
+{% endmacro %}

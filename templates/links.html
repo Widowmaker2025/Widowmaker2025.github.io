@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+
+{%- block title -%}
+{{ title_macros::title(page_title=page.title, main_title=config.title) }}
+{%- endblock -%}
+
+{% block content %}
+
+<div class="post">
+    <h1 class="post-title"><b>{{ page.title }}</b></h1>
+
+    {{ post_macros::content(page=page, summary=false, show_only_description=false) }}
+
+    <div id="links">
+        <div class="links-content">
+            {% for tag, links in config.extra.links | group_by(attribute="tag") %}
+                <h3 style="color: var(--accent);">{{ tag }}</h3>    
+                    <div class="link-navigation">
+                        {% for link in links %}
+                            {% if link.site %}
+                                <div class="link-card">
+                                    {% if link.avatar %}
+                                        <img class="ava" alt="" src="{{ link.avatar }}" 
+                                            onerror="this.src=`https://gravatar.loli.net/avatar/96662bc64e2a2f465d20a131e872155d?d=mp&v=1.5.1`"/>
+                                    {% endif %}
+                                    <div class="card-header">
+                                        <div><a href="{{ link.site }}" target="_blank">{{ link.name }}</a></div>
+                                        <div class="info">{{ link.sign }}</div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{%- if not page.extra.no_comment %}
+    {{ comment_macros::comment() }}
+{% endif -%}
+</div>
+
+
+
+{% endblock content %}
