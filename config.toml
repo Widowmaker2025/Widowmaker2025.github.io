@@ -69,7 +69,7 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "Blog", url = "$BASE_URL", image = "https://www.istockphoto.com/vector/book-icon-gm863958484-143332491?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_vector&utm_content=srp_topbanner_media&utm_term=books"}, #TODO 博客路由
-    {name = "Book", url = "$BASE_URL"},   #TODO 书评书摘路由
+    #{name = "Book", url = "$BASE_URL"},   #TODO 书评书摘路由
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
     {name = "Tags ", url = "$BASE_URL/tags"},
