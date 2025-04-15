@@ -1,6 +1,6 @@
 # ----------网站基础信息维护-----------------
 # The URL the site will be built for
-base_url = "https://widowmaker2025.github.io/"
+base_url = "https://widowmaker2025.github.io"
 title = "Widomaker"
 description = "黑百合的博客"
 default_language = "en"   # 不支持国际化/翻译，但您可以为您的网站设置 HTML 语言代码
