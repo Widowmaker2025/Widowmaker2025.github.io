@@ -1,4 +1,4 @@
-#  ----------网站基础信息维护-----------------
+#   ----------网站基础信息维护-----------------
 # The URL the site will be built for
 base_url = "https://widowmaker2025.github.io/"
 title = "Widomaker"
