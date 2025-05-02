@@ -11,7 +11,7 @@ compile_sass = true
 
 #  -------------RSS 订阅 部分设置------------ 
 # The theme supports feeds (RSS and ATOM) 支持订阅
-generate_feeds = true
+generate_feeds = false
 # Use `rss.xml` for RSS feeds and `atom.xml` for ATOM.
 feed_filenames = ["rss.xml", "atom.xml"]
 
